@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+ 
+<head>
+ 
+	<title>Sound Board</title>
+ 
+	<!-- JavaScript -->
+	<script type="text/JavaScript">
+		const sounds = ['8'
+];
+
+sounds.forEach((sound) =>{
+const btn = document.createElement('button');
+btn.classList.add('btn');
+
+btn.innerText = sound;
+
+document.getElementById('buttons').appendChild(btn);
+});
+
+
+function stopSong(){
+    sounds.forEach((sound) =>{
+        const song = document.getElementById(sound);
+
+        song.pause();
+        song.curentTime = 0;
+    });
+}
+	</script>
+ 
+	<!-- CSS -->
+	<style type="text/css">
+	<!--
+ 
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: mediumpurple;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+};
+
+.btn {
+    background-color: #f05454;
+    border-radius: 5px;
+    border: none;
+    color: #e8e8e8;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+};
+
+.btn:focus{
+    outline: none;
+};
+
+.btn:active{
+    transform: scale(0.8);
+    transform: translateY(4px);
+    box-shadow: 0 0 0 10px white;
+};
+ 
+	-->
+	</style>
+ 
+</head>
+ 
+<body>
+ 
+	<audio id="s2" src="2.mp3"></audio>
+	<audio id="s3" src="3.mp3"></audio>
+    <audio id="s6" src="6.mp3"></audio>
+    <audio id="s8" src="8.mp3"></audio>
+    <audio id="s10" src="10.mp3"></audio>
+    <audio id="s11" src="11.mp3"></audio>
+    <audio id="s16" src="16.mp3"></audio>
+    <audio id="s20" src="20.mp3"></audio>
+    <audio id="s21" src="21.mp3"></audio>
+    <audio id="s22" src="22.mp3"></audio>
+    <audio id="s24" src="24.mp3"></audio>
+    <audio id="s27" src="27.mp3"></audio>
+    <audio id="sNone" src="nosound.mp3"></audio>
+
+ 
+	<button onclick="document.getElementById('s2').play()">2</button>
+    <button onclick="document.getElementById('s3').play()">3</button>
+    <button onclick="document.getElementById('s6').play()">6</button>
+    <button onclick="document.getElementById('s8').play()">8</button>
+    <button onclick="document.getElementById('s10').play()">10</button>
+    <button onclick="document.getElementById('s11').play()">11</button>
+    <button onclick="document.getElementById('s16').play()">16</button>
+    <button onclick="document.getElementById('s20').play()">20</button>
+    <button onclick="document.getElementById('s21').play()">21</button>
+    <button onclick="document.getElementById('s22').play()">22</button>
+    <button onclick="document.getElementById('s24').play()">24</button>
+ 	<button onclick="document.getElementById('s27').play()">27</button>
+    <button onclick="document.getElementById('sNone').play()">Stop</button>
+ 
+</body>
+ 
+</html>
